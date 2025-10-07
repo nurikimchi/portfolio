@@ -4,7 +4,7 @@
         <title>Nuri Kim</title>
         <link>undefined</link>
         <description>Your blog description</description>
-        <lastBuildDate>Tue, 19 Mar 2024 07:02:38 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Oct 2025 15:55:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>undefined/favicon.ico</url>
             <link>undefined</link>
         </image>
-        <copyright>All rights reserved 2024</copyright>
+        <copyright>All rights reserved 2025</copyright>
         <item>
             <title><![CDATA[Coordinating gLTF motion with A-Frame animations]]></title>
             <link>undefined/articles/coorAnim-AFrame</link>
