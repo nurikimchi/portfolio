@@ -50,7 +50,7 @@ export default function About() {
       'Howdy',
       '안녕하세요',
       'Salutations',
-      "What's up",
+      'What\'s up',
     ]
 
     const timeOfDay = new Date().getHours()

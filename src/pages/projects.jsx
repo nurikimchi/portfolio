@@ -4,52 +4,52 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
+import logoCsfhs from 'public/images/logos/csfhs.jpg'
+import logoEG from 'public/images/logos/eg-logo.jpeg'
+import logoGurmukhiTutor from 'public/images/logos/gurmukhi-logo.png'
+import logoYOC from 'public/images/logos/yoc-logo.jpeg'
+
 const projects = [
   {
-    name: 'STEAM Website',
+    name: 'csfhs.net',
     description:
-      "Official informational and e-commerce site for Franklin High School's CTE program.",
+      'Official website for the Computer Science Pathway at Franklin High School. Implemented a complete website redesign using TailwindCSS and Svelte. Added over ten subpages under three new categories including alumni institutions, student testimonials, and photos.',
     link: {
-      href: 'https://github.com/nurikimchi/frhs-steam',
-      label: 'github.com',
+      href: 'https://csfhs.net',
+      label: 'csfhs.net',
     },
+    logo: logoCsfhs
   },
   {
-    name: 'Environminder',
+    name: 'New Zoo 3D Simulation',
     description:
-      'A React Native app made for Simplihacks 2.0 hackathon. Users can create, edit, or delete reminders to help the environment.',
+      'A city-commissioned 3D simulation of the City of Elk Grove\'s planned zoo. Helped result in 100% council approval for zoo construction. Footage and screenshots featured by several local news stations.',
     link: {
-      href: 'https://github.com/nurikimchi/Environminder',
-      label: 'github.com',
+      href: 'https://elkgrove.gov/capital-improvements/elk-grove-sacramento-zoo',
+      label: 'elkgrove.gov',
     },
+    logo: logoEG
   },
   {
-    name: 'Histogram',
+    name: 'GurmukhiTutor',
     description:
-      'Mobile app allowing users to create/delete posts on histograms and comment on other posts.',
+      'A React Native app teaching Punjabi script, Gurmukhi, using trace-tracking and gamification features. Received $110 Apple Developer grant from HackClub via the Cider program.',
     link: {
-      href: 'https://github.com/Franklin-Fullstack-Developers/histogram',
-      label: 'github.com',
+      href: 'https://www.youtube.com/watch?v=r2Qa-Un_pFI',
+      label: 'youtube.com',
     },
+    logo: logoGurmukhiTutor
   },
   {
-    name: 'Groundbnb',
+    name: 'Youth on Course',
     description:
-      'Airbnb Experiences clone focusing on passing props between functional components through React.',
+      'Developed a released feature on the non-profit organization\'s mobile app allowing users to post their golf scores and upload them to a global database (GHIN) and receive a calculated handicap.',
     link: {
-      href: 'https://github.com/nurikimchi/airbnb-experiences-clone',
-      label: 'github.com',
+      href: 'https://apps.apple.com/us/app/youth-on-course/id1475287768',
+      label: 'App Store',
     },
-  },
-  {
-    name: 'Pig Game',
-    description:
-      "A C program of the dice game, Pig. Built for 'Exploring Computer Science' course.",
-    link: {
-      href: 'https://github.com/nurikimchi/pig-game',
-      label: 'github.com',
-    },
-  },
+    logo: logoYOC
+  }
 ]
 
 function LinkIcon(props) {
@@ -70,27 +70,35 @@ export default function Projects() {
         <title>Projects - Nuri Kim</title>
         <meta
           name="description"
-          content="Just some apps and programs I built with other developers, hackathons, online courses, and classes. Most of them are full-stack web apps with React or separate React Native apps."
+          content="I worked on almost all of these projects as a lead of a team of developers--exception of Youth on Course where I was a junior developer working remotely."
         />
       </Head>
+      <Image
+        src="/public/images/logos/csfhs.jpg"
+        width="8"
+        height="8"
+      />
       <SimpleLayout
-        title="Some things I built along the way."
-        intro="Just some apps and programs I built for hackathons, online courses, classes, and with other developers. Most of them are full-stack web apps with React or separate React Native apps."
+        title="Apps I've built and released"
+        intro="I worked on almost all of these projects as a lead of a team of developers--exception of Youth on Course where I was a junior developer working remotely."
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16"
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              {/* <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
+                  width="8"
+                  height="8"
                   className="h-8 w-8"
                   unoptimized
+                  style={{borderRadius: '50%'}}
                 />
-              </div> */}
+              </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>

@@ -257,20 +257,20 @@ export const chartOptions = {
   tooltip: {
     isHtml: true,
   },
-  trendlines: {
-    0: {
-      type: 'polynomial',
-      color: 'green',
-      lineWidth: 75,
-      opacity: 0.2,
-      degree: 3,
-      visibleInLegend: true,
-      labelInLegend: 'trend',
-    },
-  },
+  // trendlines: {
+  //   0: {
+  //     type: 'polynomial',
+  //     color: 'green',
+  //     lineWidth: 75,
+  //     opacity: 0.2,
+  //     degree: 3,
+  //     visibleInLegend: true,
+  //     labelInLegend: 'trend',
+  //   },
+  // },
 }
 
-export default function Uses() {
+export default function Golf() {
   return (
     <>
       <Head>

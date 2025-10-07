@@ -141,52 +141,52 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Youth on Course',
-      title: 'Mobile Developer',
-      logo: logoYOC,
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Franklin Software Developers',
+      company: 'Full-Stack Development',
       title: 'Club President',
       logo: logoFSD,
-      start: '2022',
+      start: 'Aug 2022',
       end: {
-        label: 'Present',
+        label: 'May 2025',
         dateTime: new Date().getFullYear(),
       },
     },
     {
       company: 'CS4Girls',
-      title: 'Volunteer',
+      title: 'President (24-25)',
       logo: logoCS4Girls,
-      start: '2021',
+      start: 'Aug 2021',
       end: {
-        label: 'Present',
+        label: 'May 2025',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      company: 'Youth on Course',
+      title: 'Mobile Developer',
+      logo: logoYOC,
+      start: 'Oct 2023',
+      end: {
+        label: 'Mar 2025',
         dateTime: new Date().getFullYear(),
       },
     },
     {
       company: 'Ark Mission Church',
-      title: 'Media Team Department Head',
+      title: 'Youth Media Dpt. Head',
       logo: logoAMC,
-      start: '2022',
+      start: 'Jun 2022',
       end: {
-        label: 'Present',
+        label: 'Aug 2024',
         dateTime: new Date().getFullYear(),
       },
     },
     {
       company: 'City of Elk Grove',
-      title: 'Contractor',
+      title: 'Project Manager',
       logo: logoEG,
-      start: '2023',
+      start: 'Aug 2023',
       end: {
-        label: 'Present',
+        label: 'May 2024',
         dateTime: new Date().getFullYear(),
       },
     },
@@ -237,14 +237,14 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button
+      {/* <Button
         href={resumeLink}
         variant="secondary"
         className="group mt-6 w-full"
       >
-        See Resume
+              See Resume */}
         {/* <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" /> */}
-      </Button>
+      {/* </Button> */}
     </div>
   )
 }
@@ -257,8 +257,8 @@ function Photos() {
           'rotate-2 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
         )}>
           <img
-            src={image1.src}
-            alt="Golden Bridge in Sacramento, California."
+            src={image2.src}
+            alt="An open Bible."
             sizes="(min-width: 640px) 18rem, 11rem"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -267,11 +267,12 @@ function Photos() {
           '-rotate-2 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
         )}>
           <img
-            src={image2.src}
-            alt="An open Bible."
+            src={image1.src}
+            alt="Golden Bridge in Sacramento, California."
             sizes="(min-width: 640px) 18rem, 11rem"
             className="absolute inset-0 h-full w-full object-cover"
           />
+          
         </div>
         <div className={clsx(
           'rotate-2 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
@@ -287,8 +288,8 @@ function Photos() {
           '-rotate-2 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
         )}>
           <img
-            src={image4.src}
-            alt="A stack of paperback books."
+            src={image5.src}
+            alt="A greenside bunker on a golf course."
             sizes="(min-width: 640px) 18rem, 11rem"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -297,10 +298,10 @@ function Photos() {
           'rotate-2 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
         )}>
           <img
-            src={image5.src}
-            alt="A greenside bunker on a golf course."
+            src={image4.src}
+            alt="A stack of paperback books."
             sizes="(min-width: 640px) 18rem, 11rem"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover -scale-x-100"
           />
         </div>
       </div>

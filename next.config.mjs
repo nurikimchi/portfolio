@@ -14,6 +14,7 @@ const nextConfig = {
     path: '',
   },
   assetPrefix: './',
+  compress: true
 }
 
 const withMDX = nextMDX({
