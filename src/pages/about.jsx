@@ -108,7 +108,7 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                This time, get to know me personally! Here are some of my curent
+                This time, get to know me personally! Here are some of my current
                 interests!
               </p>
 
