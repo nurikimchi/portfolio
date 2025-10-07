@@ -128,10 +128,9 @@ export default function About() {
                 focus.
               </p>
               <p>
-                I have experienced FOMO of TikTok brainrot/references at the
-                outset, but you will connect with the people you relate to (+
-                you will start saying the same references around two weeks later
-                if you happen to be friends with a brainrotted person).
+                I have experienced FOMO, but you will eventually connect with
+                the people you relate to (+ end up saying the same
+                references around weeks later).
               </p>
               <p>
                 Getting a{' '}
@@ -154,7 +153,12 @@ export default function About() {
                 badminton, table tennis, volleyball are some of my favorites.
               </p>
               <p>
-                I used to play competitive golf in high school, but now play for fun. <u><a href="/golf">Here</a></u> are my golf scores from then.
+                I used to play competitive golf in high school, but now play for
+                fun.{' '}
+                <u>
+                  <a href="/golf">Here</a>
+                </u>{' '}
+                are my golf scores from then.
               </p>
 
               <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-xl">
@@ -170,8 +174,8 @@ export default function About() {
                   <ul className="list-disc pl-6">
                     <li>
                       One of my favorite books I've recently read because it
-                      gave me a better insight on my Korean heritage
-                      and history.
+                      gave me a better insight on my Korean heritage and
+                      history.
                     </li>
                   </ul>
                 </li>
@@ -184,7 +188,8 @@ export default function About() {
                       considered.
                     </li>
                     <li>
-                      I had a summer-long phase where I wanted to be a hunter-gatherer.
+                      I had a summer-long phase where I wanted to be a
+                      hunter-gatherer.
                     </li>
                   </ul>
                 </li>
