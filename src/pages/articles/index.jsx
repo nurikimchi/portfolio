@@ -45,7 +45,7 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <SimpleLayout
-        title="Guides, blogs, and personal thoughts on software development."
+        title="Guides, blogs, and personal thoughts."
         // intro="Welcome to my blog!"
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

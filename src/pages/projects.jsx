@@ -70,7 +70,7 @@ export default function Projects() {
         <title>Projects - Nuri Kim</title>
         <meta
           name="description"
-          content="I worked on almost all of these projects as a lead of a team of developers--exception of Youth on Course where I was a junior developer working remotely."
+          content="I worked on almost all of these projects as a lead of a team of developers&mdash;exception of Youth on Course where I was a junior developer working remotely."
         />
       </Head>
       <Image
@@ -79,8 +79,8 @@ export default function Projects() {
         height="8"
       />
       <SimpleLayout
-        title="Apps I've built and released"
-        intro="I worked on almost all of these projects as a lead of a team of developers--exception of Youth on Course where I was a junior developer working remotely."
+        title="Apps I've built and released."
+        intro="I worked on almost all of these projects as a lead of a team of developers&mdash;exception of Youth on Course where I was a junior developer working remotely."
       >
         <ul
           role="list"
@@ -100,7 +100,7 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">

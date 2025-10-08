@@ -165,7 +165,7 @@ export default function About() {
                 Reading
               </h1>
               <p>
-                I mostly read classic or non-fiction books--with some
+                I mostly read classic or non-fiction books&mdash;with some
                 exceptions.
               </p>
               <ul className="list-disc pl-7">
