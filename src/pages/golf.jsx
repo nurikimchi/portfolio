@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Chart } from 'react-google-charts'
+import { useState, useEffect } from 'react';
 
 export const pointConstructor = [
   { type: 'date', id: 'Date' },
@@ -247,30 +248,45 @@ function createCustomHTMLTooltip(GCLogoURL, GCName, date, score, desc) {
   )
 }
 
-function chartBackgroundDecider() {}
 
-export const chartOptions = {
-  title: 'Chart',
-  hAxis: { title: 'Date' },
-  vAxis: { title: 'Score' },
-  legend: 'none',
-  tooltip: {
-    isHtml: true,
-  },
-  // trendlines: {
-  //   0: {
-  //     type: 'polynomial',
-  //     color: 'green',
-  //     lineWidth: 75,
-  //     opacity: 0.2,
-  //     degree: 3,
-  //     visibleInLegend: true,
-  //     labelInLegend: 'trend',
-  //   },
-  // },
-}
+
+
 
 export default function Golf() {
+  const [chartBgColor, setChartBgColor] = useState();
+  const [chartTextColor, setChartTextColor] = useState('green');
+  
+  const chartOptions = {
+    title: 'Nuri\'s Golf Scores',
+    titleTextStyle: {
+      color: chartTextColor,
+      fontSize: 28
+    },
+    hAxis: { textStyle: {color: chartTextColor}},
+    vAxis: { textStyle: {color: chartTextColor} },
+    legend: 'none',
+    tooltip: {
+      isHtml: true,
+    },
+    backgroundColor: chartBgColor,
+    // trendlines: {
+    //   0: {
+    //     type: 'polynomial',
+    //     color: 'green',
+    //     lineWidth: 75,
+    //     opacity: 0.2,
+    //     degree: 3,
+    //     visibleInLegend: true,
+    //     labelInLegend: 'trend',
+    //   },
+    // },
+  }
+
+  useEffect(() => {
+    setChartBgColor('')
+    setChartTextColor('green')
+  }, [])
+
   return (
     <>
       <Head>
@@ -284,7 +300,7 @@ export default function Golf() {
         title="Some of my golf scores."
         intro="In creating my portfolio I thought I'd share some insight into my other hobbies. I'm using React Google Charts to visualize all the scores I could salvage from past scorecards and spreadsheets."
       >
-        <div className="space-y-10">
+        <div className="space-y-0">
           <Chart
             chartType="ScatterChart"
             width="100%"
