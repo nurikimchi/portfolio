@@ -37,7 +37,7 @@ export default function Speaking() {
       </Head>
       <SimpleLayout
         title="Moments when others took notice."
-        intro="I’ve been fortunate to have my work noticed and featured by local press."
+        intro="I’ve been fortunate to have my work noticed and featured by others."
       >
         <div className="space-y-20">
           <SpeakingSection title="Interviews">
@@ -54,7 +54,7 @@ export default function Speaking() {
             <Appearance
               href=""
               title="City of Elk Grove - Regular Council Meeting (5/08/24)"
-              description="I presented our work to city councilmembers, detailing the start of the development process, challenges we faced, and sharing my experience as project lead. Here is that presentation and their comments."
+              description="I presented our work to city councilmembers, detailing the start of the development process, challenges we faced, and my experience as project lead. Here is that presentation and their comments."
               event="Council Meeting"
               cta="Watch the video below"
             />
@@ -65,7 +65,7 @@ export default function Speaking() {
             <Appearance
               href="https://www.abc10.com/video/news/local/elk-grove/community-brings-input-on-design-for-new-sacramento-zoo-at-open-house-event/103-cd47249e-a093-41ba-9c55-7b3bce1072cb"
               title="Community brings input on design for new Sacramento zoo at open house event"
-              description="During our development process, we participated in an open house event for the City of Elk Grove. We deployed a prototype version of our work and put them on iPads. Residents interacted with the simulation and provided us feedback."
+              description="During our development process, we participated in an open house event for the City of Elk Grove. We deployed a prototype version of our work on iPads. Residents interacted with the simulation and gave us feedback."
               event="ABC 10"
               cta="Watch video"
             />
@@ -80,7 +80,7 @@ export default function Speaking() {
             <Appearance
               href="https://www.youtube.com/watch?v=Y6eeZ1jI8Bo"
               title="Recommended new name of proposed Elk Grove zoo is revealed"
-              description="This represents an instance of local news coverage using footage when discussing the zoo in general."
+              description="An instance of local news using our screenshots as b-roll when discussing the zoo in general."
               event="KCRA 3"
               cta="Watch video"
             />
