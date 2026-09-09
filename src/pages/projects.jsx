@@ -8,12 +8,22 @@ import logoCsfhs from 'public/images/logos/csfhs.jpg'
 import logoEG from 'public/images/logos/eg-logo.jpeg'
 import logoGurmukhiTutor from 'public/images/logos/gurmukhi-logo.png'
 import logoYOC from 'public/images/logos/yoc-logo.jpeg'
+import logoBlink from 'public/images/logos/blink-logo.webp'
 
 const projects = [
   {
+    name: 'BLink',
+    description: 'A pop-up finder for campus students. Developed a ML-based toxicity checker. Accrued 500+ downloads from UCLA students.',
+    link: {
+      href: 'https://apps.apple.com/us/app/ucla-blink/id6742316697',
+      label: 'App Store',
+    },
+    logo: logoBlink
+  },
+  {
     name: 'csfhs.net',
     description:
-      'Official website for the Computer Science Pathway at Franklin High School. Implemented a complete website redesign using TailwindCSS and Svelte. Added over ten subpages under three new categories including alumni institutions, student testimonials, and photos.',
+      'Official website for the Computer Science Pathway at Franklin High School. Implemented a complete website redesign using TailwindCSS and Svelte.',
     link: {
       href: 'https://csfhs.net',
       label: 'csfhs.net',
