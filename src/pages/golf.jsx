@@ -264,6 +264,12 @@ export default function Golf() {
     },
     hAxis: { textStyle: {color: chartTextColor}},
     vAxis: { textStyle: {color: chartTextColor} },
+    chartArea: {
+      left: '6%',
+      top: '7%',
+      width: '87%',
+      height: '75%',
+    },
     legend: 'none',
     tooltip: {
       isHtml: true,
