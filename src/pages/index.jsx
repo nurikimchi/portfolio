@@ -14,6 +14,8 @@ import logoCS4Girls from 'public/images/logos/cs4girls-logo.svg'
 import logoAMC from 'public/images/logos/amc-logo.png'
 import logoEG from 'public/images/logos/eg-logo.jpeg'
 import logoYOC from 'public/images/logos/yoc-logo.jpeg'
+import logoUCLA from 'public/images/logos/ucla-logo.svg'
+import logoStackoverflow from 'public/images/logos/stackoverflow-logo.svg'
 
 import image1 from 'public/images/photos/image-1.jpg'
 import image2 from 'public/images/photos/image-2.jpg'
@@ -72,6 +74,15 @@ function BriefcaseIcon(props) {
     </svg>
   )
 }
+
+function HeartIcon(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" {...props}>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+    </svg>
+  )
+}
+
 
 function ArrowDownIcon(props) {
   return (
@@ -138,17 +149,51 @@ function Newsletter() {
   )
 }
 
-function Resume() {
+function Resume({ isWorkRelated }) {
   let resume = [
     {
+      company: 'University of California, Los Angeles',
+      title: 'Linguistics Research Assistant',
+      logo: logoUCLA,
+      start: 'Sep 2025',
+      end: {
+        label: 'Jun 2026',
+        dateTime: new Date().getFullYear(),
+      },
+      type: 'work'
+    },
+    {
+      company: 'Youth on Course',
+      title: 'Junior Developer',
+      logo: logoYOC,
+      start: 'Oct 2023',
+      end: {
+        label: 'Mar 2025',
+        dateTime: new Date().getFullYear(),
+      },
+      type: 'work',
+    },
+    {
+      company: 'City of Elk Grove',
+      title: 'Product Manager',
+      logo: logoEG,
+      start: 'Aug 2023',
+      end: {
+        label: 'May 2024',
+        dateTime: new Date().getFullYear(),
+      },
+      type: 'work',
+    },
+    {
       company: 'Full-Stack Development',
-      title: 'Club President',
+      title: 'President',
       logo: logoFSD,
       start: 'Aug 2022',
       end: {
         label: 'May 2025',
         dateTime: new Date().getFullYear(),
       },
+      type: 'community',
     },
     {
       company: 'CS4Girls',
@@ -159,47 +204,40 @@ function Resume() {
         label: 'May 2025',
         dateTime: new Date().getFullYear(),
       },
+      type: 'community',
     },
     {
-      company: 'Youth on Course',
-      title: 'Mobile Developer',
-      logo: logoYOC,
-      start: 'Oct 2023',
+      company: 'StackOverflow',
+      title: 'Forum Contributor',
+      logo: logoStackoverflow,
+      start: 'Nov 2022',
       end: {
-        label: 'Mar 2025',
+        label: 'Present',
         dateTime: new Date().getFullYear(),
       },
-    },
-    {
-      company: 'Ark Mission Church',
-      title: 'Youth Media Dpt. Head',
-      logo: logoAMC,
-      start: 'Jun 2022',
-      end: {
-        label: 'Aug 2024',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'City of Elk Grove',
-      title: 'Project Manager',
-      logo: logoEG,
-      start: 'Aug 2023',
-      end: {
-        label: 'May 2024',
-        dateTime: new Date().getFullYear(),
-      },
-    },
+      type: 'community'
+    }
   ]
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Experience</span>
+        {isWorkRelated === true ? 
+          (
+            <>
+              <BriefcaseIcon className="h-6 w-6 flex-none" /> 
+              <span className="ml-3">Work Experience</span>
+            </>
+          ):
+            <>
+              <HeartIcon className="h-6 w-6 flex-none"/>
+              <span className="ml-3">Community Experience</span>
+            </>
+          }
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
+          (role.type === 'work' && isWorkRelated || role.type === 'community' && !isWorkRelated)  ?
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
@@ -210,13 +248,14 @@ function Resume() {
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
-              </dd>
               <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.title}
+              </dd>
+
+              <dt className="sr-only">Company</dt>
+              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                {role.company}
               </dd>
               <dt className="sr-only">Date</dt>
               <dd
@@ -235,6 +274,8 @@ function Resume() {
               </dd>
             </dl>
           </li>
+          :
+          <></>
         ))}
       </ol>
       {/* <Button
@@ -245,6 +286,7 @@ function Resume() {
               See Resume */}
         {/* <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" /> */}
       {/* </Button> */}
+      
     </div>
   )
 }
@@ -332,13 +374,13 @@ export default function Home({ articles }) {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I'm a first-year student at UCLA studying Linguistics & Computer Science. My primary work involves full-stack web and mobile development using React/JavaScript. Other areas of my technical experience include VR, Python, and TailwindCSS.
+              I'm a second-year student at UCLA studying Linguistics & Computer Science. My primary work involves full-stack web and mobile development using React/JavaScript. Other areas of my technical experience include VR, Python, and TailwindCSS.
             </p>
             <p>
               As a technical lead, I've delivered multiple published projects and led an initiative introducing Python programming, game and web development to female elementary students. A summary of my positions, involvement, and my articles are further down on this page. Meanwhile, my projects are located <u><a href="/projects">here</a></u>.
             </p>
             <p>
-              I am actively seeking a Summer 2026 internship opportunity. I would love to join a collaborative, passionate team where I can contribute my technical and leadership expertise to hone results and create impact. 
+              I am actively seeking a Summer 2027 internship opportunity. I would love to join a collaborative, passionate team where I can contribute my technical and leadership expertise to hone results and create impact. 
             </p>
             <p>
               The rest of my website awaits!
@@ -371,14 +413,15 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-16 lg:pr-14 xl: pr-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
+          <div className="space-y-10 lg:pl-8 xl:pl-10">
             {/* <Newsletter /> */}
-            <Resume />
+            <Resume isWorkRelated={true}/>
+            <Resume isWorkRelated={false}/>
           </div>
         </div>
       </Container>
