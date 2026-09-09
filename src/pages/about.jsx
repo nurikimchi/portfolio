@@ -47,10 +47,7 @@ export default function About() {
       'Hi',
       'Hello',
       'Hey there',
-      'Howdy',
-      '안녕하세요',
-      'Salutations',
-      'What\'s up',
+      '안녕',
     ]
 
     const timeOfDay = new Date().getHours()
@@ -104,7 +101,7 @@ export default function About() {
           </div> */}
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              {greeting}! It's Nuri, again.
+              {greeting}! It's me, again.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
@@ -126,22 +123,6 @@ export default function About() {
                 I've deactivated my social media accounts and removed YouTube
                 recommendations. I've felt a greater peace of mind and better
                 focus.
-              </p>
-              <p>
-                I have experienced FOMO, but you will eventually connect with
-                the people you relate to (+ end up saying the same
-                references around weeks later).
-              </p>
-              <p>
-                Getting a{' '}
-                <u>
-                  <a href="https://www.thelightphone.com/lightiii">
-                    Light Phone
-                  </a>
-                </u>{' '}
-                was/is also a genuine source of contemplation. I may have
-                watched more promotional videos, and surfed through more Reddit
-                posts than I'd like to admit...
               </p>
 
               <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-xl">
@@ -209,14 +190,14 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink
-                href="github.com/nurikimchi"
+                href="https://github.com/nurikimchi"
                 icon={GitHubIcon}
                 className="mt-4"
               >
                 Follow on GitHub
               </SocialLink>
               <SocialLink
-                href="linkedin.com/in/nurikimchi"
+                href="https://linkedin.com/in/nurikimchi"
                 icon={LinkedInIcon}
                 className="mt-4"
               >
